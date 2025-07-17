@@ -12,6 +12,18 @@
      ```bash
      sudo apt-get install sshpass
      ```
+## sshでポート転送を有効にする方法
+sshでポート転送を有効にするには
+`/etc/ssh/sshd_config`に
+```
+AllowTcpForwarding yes
+GatewayPorts yes
+```   
+`/etc/sysctl.conf`に
+```
+net.ipv4.ip_forward=1
+```
+を記載
 
 ## 使用方法
 
